@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JWT + RBAC Posts Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <!-- LOGIN -->
+      <section id="login-view" class="card">
+        <h1>Sign in</h1>
+        <p class="hint">admin / admin123 &nbsp;·&nbsp; viewer / viewer123</p>
+        <label for="username">Username</label>
+        <input id="username" placeholder="admin" autocomplete="username" />
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="••••••••" autocomplete="current-password" />
+        <div class="row">
+          <button id="login-admin" class="btn primary">Login as Admin</button>
+          <button id="login-viewer" class="btn">Login as Viewer</button>
+        </div>
+        <p id="login-error" class="error" hidden></p>
+      </section>
+
+      <!-- APP -->
+      <section id="app-view" hidden>
+        <header class="topbar">
+          <div>
+            <h1 id="welcome">Welcome,</h1>
+            <span id="role-badge" class="badge"></span>
+          </div>
+          <button id="logout" class="btn">Logout</button>
+        </header>
+
+        <div class="card">
+          <strong>Total posts: <span id="total">0</span></strong>
+          <p id="access-note" class="hint"></p>
+        </div>
+
+        <form id="create-form" class="card" hidden>
+          <h2>Create a post</h2>
+          <input id="new-title" placeholder="Post title" />
+          <textarea id="new-body" rows="3" placeholder="Post body"></textarea>
+          <button class="btn primary" type="submit">Add Post</button>
+        </form>
+
+        <div id="posts"></div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

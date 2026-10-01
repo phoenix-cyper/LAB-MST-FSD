@@ -1,0 +1,15 @@
+{
+  "name": "jwt-rbac-posts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Login form with role-based access (JWT + RBAC) and a posts manager",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "4.19.2",
+    "jsonwebtoken": "9.0.2"
+  }
+}
